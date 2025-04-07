@@ -15,7 +15,7 @@ import SearchBar from './components/SearchBar'
 
 const App = () => {
   return (
-    <div className = 'bg-orange-100 min-h-screen px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
+    <div className = 'px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
       <Navbar />
       <SearchBar/>
       <Routes>
