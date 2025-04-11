@@ -1,6 +1,6 @@
 // Importing images and assets for the application
 import cart_icon from './cart.png';
-import about_icon from './about.png';
+import about_icon from './about1.jpg';
 import delete_icon from './delete.png';
 import menu_icon from './menu.png';
 import support_icon from './support.png';
@@ -42,6 +42,9 @@ import dog_cat_acc_1a from './dog_cat_acc_1a.png';
 import dog_cat_acc_1b from './dog_cat_acc_1b.png';
 import paw_icon from './paw.png';
 import dull_paw_icon from './footprint.png';
+import paypal_icon from './paypal.png';
+import atmcard_icon from './atm-card.png';
+import contact_us from './contactus.png';
 
 // all assets
 export const assets = {
@@ -87,7 +90,10 @@ export const assets = {
     dog_cat_acc_1a,
     dog_cat_acc_1b,
     paw_icon,
-    dull_paw_icon
+    dull_paw_icon,
+    paypal_icon,
+    atmcard_icon,
+    contact_us
 
 }
 
@@ -131,6 +137,7 @@ export const products = [
         category: "Dogs",
         subcategory: "Accessories",
         sizes: ["S","M", "L", "XL"],
+        colors: ["Regular"],
         date: 1232423547,
         bestseller: true,
     },
@@ -158,6 +165,7 @@ export const products = [
         category: "Dogs",
         subcategory: "Toys",
         sizes: ["S"],
+        colors: ["Regular"],
         date: 1232423547,
         bestseller: true,
     },
@@ -171,6 +179,7 @@ export const products = [
         category: "Cats",
         subcategory: "Leashes & Harnesses",
         sizes: ["S","M"],
+        colors: ["Regular"],
         date: 1232423547,
         bestseller: false,
     },
@@ -198,6 +207,7 @@ export const products = [
         category: "Cats",
         subcategory: "Toys",
         sizes: ["S"],
+        colors: ["Regular"],
         date: 1232423547,
         bestseller: false,
     },
@@ -225,6 +235,7 @@ export const products = [
         category: "Cats",
         subcategory: "Accessories",
         sizes: ["L"],
+        colors: ["Regular"],
         date: 1232423547,
         bestseller: true,
     }

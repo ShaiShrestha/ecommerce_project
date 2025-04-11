@@ -7,7 +7,7 @@ const NewsletterBox = () => {
     }
   return (
     <div className ='text-center'>
-      <p className='text-2xl font-medium text-gray-800'>Subscribe now ang get 15% off your next order.</p>
+      <p className='delius-regular text-2xl font-medium text-gray-800'>Subscribe now and get 15% off your next order.</p>
       <p className='text-gray-400 mt-3'>
         The subscription will inform you about our latest products and offers.
       </p>
