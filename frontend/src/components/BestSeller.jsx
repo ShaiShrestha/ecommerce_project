@@ -1,12 +1,19 @@
+// Description: This component displays the best selling products in a grid format. 
+// It uses the ShopContext to fetch product data and filters the products to show only the best sellers. 
+// The filtered products are then displayed using the ProductItem component. 
+// The component also includes a title and a description for better user experience.
+// Importing necessary libraries and components
 import React, { useState, useContext, useEffect } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import Title from './Title'
 import ProductItem from './ProductItem'
 
 const BestSeller = () => {
+    // Importing context and initializing state
     const {products} = useContext(ShopContext);
     const [bestSeller, setBestSeller] = useState([]);
-
+    
+    // useEffect to filter and set best selling products
     useEffect(()=>{
         const bestProduct = products.filter((item)=>(item.bestseller));
         setBestSeller(bestProduct.slice(0,10));

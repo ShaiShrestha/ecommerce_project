@@ -1,3 +1,6 @@
+// Description: This component is a newsletter subscription box that allows users to enter their email and subscribe to a newsletter. 
+// It includes a title, description, and an input field for the email address, along with a submit button. 
+// The component uses React for state management and event handling.
 import React from 'react'
 
 const NewsletterBox = () => {

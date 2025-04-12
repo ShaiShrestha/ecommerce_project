@@ -1,3 +1,5 @@
+// Importing React and necessary hooks
+// Description: This component displays the latest collection of products in a grid format.
 import React, { useState, useContext, useEffect } from 'react'; // Import useContext
 import { ShopContext } from '../context/ShopContext'
 import Title from './Title';

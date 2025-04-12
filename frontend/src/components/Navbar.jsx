@@ -1,11 +1,15 @@
+// Description: Navbar component for the e-commerce website. 
+// It includes links to different pages, a search icon, a user icon, and a cart icon. 
+// The navbar is responsive and includes a mobile menu that appears when the menu icon is clicked. 
+// The cart icon displays the number of items in the cart.
 import React, { useContext } from 'react'
 import {assets} from '../assets/assets'
 import { Link, Links, NavLink } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext'
 
 const Navbar = () => {
-    const[visible, setVisible] = React.useState(false);
-    const{setShowSearch, getCartCount} = useContext(ShopContext);
+    const[visible, setVisible] = React.useState(false); // State to control the visibility of the mobile menu
+    const{setShowSearch, getCartCount} = useContext(ShopContext); // Function to get the cart count from context
 
   return (
     <div className = 'flex items-center justify-between py-5 font-medium'>

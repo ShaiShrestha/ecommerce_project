@@ -1,10 +1,13 @@
+// Description: This component calculates the total amount of the cart, including delivery fees and subtotal. 
+// It uses the ShopContext to get the currency and delivery fee values. 
+// The component is styled using Tailwind CSS classes for a clean and modern look.
 import React, { useContext } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import Title from './Title';
 
 const CartTotal = () => {
-
-    const{currency,delivery_fee,getCartAmount} = useContext(ShopContext);
+    
+    const{currency,delivery_fee,getCartAmount} = useContext(ShopContext);// Importing context values
 
   return (
     <div className='w-full'>
@@ -14,7 +17,7 @@ const CartTotal = () => {
         <div className='flex flex-col gap-2 mt-2 text-sm'>
             <div className='flex justify-between'>
                 <p>Subtotal</p>
-                <p>{currency}{getCartAmount()}</p>
+                <p>{currency}{getCartAmount().toFixed(2)}</p>
             </div>
             <hr />
             <div className='flex justify-between'>

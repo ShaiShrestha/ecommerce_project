@@ -1,3 +1,6 @@
+// Description: This is the about page of the website. 
+// It contains information about the website and its goals. 
+// It also contains a newsletter box for users to subscribe to the newsletter.
 import React from 'react'
 import Title from '../components/Title'
 import { assets } from '../assets/assets'

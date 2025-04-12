@@ -46,7 +46,7 @@ import paypal_icon from './paypal.png';
 import atmcard_icon from './atm-card.png';
 import contact_us from './contactus.png';
 
-// all assets
+// exporting all the images and assets for use in the application
 export const assets = {
     cart_icon,
     about_icon,
@@ -97,7 +97,7 @@ export const assets = {
 
 }
 
-// Arrats of products for the store
+// Array of product objects for the store
 export const products = [
 
     {

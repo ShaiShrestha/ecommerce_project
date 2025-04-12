@@ -1,3 +1,7 @@
+// Description: This component is a search bar that allows users to search for products in the shop. 
+// It is only visible on the collection page and can be toggled on and off. 
+// The search input is controlled by the ShopContext, which manages the state of the search term and whether the search bar is shown or not. 
+// The component also includes a delete icon to clear the search term.
 import React, { useContext, useEffect, useState } from 'react'
 import { assets } from '../assets/assets';
 import { ShopContext } from '../context/ShopContext';

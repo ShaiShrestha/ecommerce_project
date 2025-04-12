@@ -1,3 +1,6 @@
+// Description: This component is used to display a title with a line on either side of it. 
+// It takes two props: text1 and text2. The text1 prop is displayed in gray, while the text2 prop is displayed in a darker gray and is bolded. 
+// The component uses Tailwind CSS for styling and is responsive, with the line width changing based on the screen size.
 import React from 'react'
 
 const Title = ({text1, text2}) => {

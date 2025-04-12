@@ -1,3 +1,6 @@
+// description: This component is used to display the policy of the website. 
+// It contains three sections: 30 days return policy, quality products, and best customer support. 
+// Each section contains an icon, a title, and a description. The component is responsive and adjusts its layout based on the screen size.
 import React from 'react'
 import { assets } from '../assets/assets'
 

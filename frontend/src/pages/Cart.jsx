@@ -1,3 +1,7 @@
+// Description: This file contains the Cart component which displays the items in the cart, allows users to update quantities, and proceed to checkout. 
+// It uses React hooks and context for state management and navigation.
+// Importing necessary modules and components
+
 import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import Title from '../components/Title';
@@ -6,9 +10,9 @@ import CartTotal from '../components/CartTotal';
 
 const Cart = () => {
 
-  const {products, currency, cartItems, updateQuantity, navigate} = useContext(ShopContext);
+  const {products, currency, cartItems, updateQuantity, navigate} = useContext(ShopContext); // Importing context values
 
-  const [cartData,setCartData] = useState([]);
+  const [cartData,setCartData] = useState([]); // Initialize state for cart data
 
   useEffect(() => {
     const tempData = [];
@@ -56,6 +60,7 @@ const Cart = () => {
                     <div className='flex items-center gap-5 mt-2'>
                       <p>{currency}{productData.price}</p>
                       <p className='px-2 sm:px-3 sm:py-1 border bg-slate-50'>{item.size}</p>
+                      <p className='px-2 sm:px-3 sm:py-1 border bg-slate-50'>{item.color}</p>
 
                     </div>
                   </div>

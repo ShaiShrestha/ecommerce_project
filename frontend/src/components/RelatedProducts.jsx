@@ -1,3 +1,7 @@
+// Description: This component displays related products based on the category and subcategory of the current product being viewed. 
+// It uses the ShopContext to access the list of products and filters them accordingly. 
+// The filtered products are then displayed in a grid format, with each product represented by a ProductItem component. 
+// The component also includes a title section that indicates the purpose of the displayed products.
 import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import Title from './Title';
@@ -5,9 +9,10 @@ import ProductItem from './ProductItem';
 
 const RelatedProducts = ({category, subCategory}) => {
 
-    const {products} = useContext(ShopContext);
-    const [related, setRelated] = useState([]);
+    const {products} = useContext(ShopContext); // Importing products from context
+    const [related, setRelated] = useState([]); // Initialize state for related products
 
+    
     useEffect(() => {
         if(products.length > 0){
             let productsCopy = products.slice();

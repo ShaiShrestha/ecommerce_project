@@ -1,3 +1,4 @@
+// Description: Footer component for the website, containing company information and contact details.
 import React from 'react'
 import { assets } from '../assets/assets'
 const Footer = () => {

@@ -1,12 +1,16 @@
+// Description: This file contains the ShopContextProvider component, which provides the context for the shop. 
+// It includes functions to manage the cart, such as adding items, updating quantities, and calculating totals. 
+// It also includes state variables for search functionality and delivery fees.
 import { createContext, useEffect, useState } from "react";
 import {products} from "../assets/assets";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 
-export const ShopContext = createContext();
+export const ShopContext = createContext(); // Create a context for the shop
 
 const ShopContextProvider = (props) =>{
+    // State variables for products, currency, delivery fee, search term, and cart items
 
     const currency = '$';
     const delivery_fee = 10;
@@ -15,22 +19,23 @@ const ShopContextProvider = (props) =>{
     const [cartItems, setCartItems] = useState({});
     const navigate = useNavigate();
 
-    const addToCart = async (itemId, size, color) => {
+    
+    const addToCart = async (itemId, size, color) => { // Function to add items to the cart
         let cartData = structuredClone(cartItems);
 
         if(!size){
-            toast.error('Please select a size');
+            toast.error('Please select a size'); // Size validation
             return;
         }
 
         if(!color){
-            toast.error('Please select a color');
+            toast.error('Please select a color'); // Color validation
             return;
         }
-    
+        // Check if the item already exists in the cart
         if (cartData[itemId]) {
 
-            if (cartData[itemId][size]) {
+            if (cartData[itemId][size]) { // Check if the size already exists
                 if (color) {
                     if (cartData[itemId][size][color]) {
                         cartData[itemId][size][color] += 1;
@@ -40,14 +45,14 @@ const ShopContextProvider = (props) =>{
                 } else {
                     cartData[itemId][size] += 1;
                 }
-            } else {
+            } else { // If the size doesn't exist, add it
                 if (color) {
                     cartData[itemId][size] = { [color]: 1 };
                 } else {
                     cartData[itemId][size] = 1;
                 }
             }
-        } else {
+        } else { // If the item doesn't exist, add it
             if (color) {
                 cartData[itemId] = { [size]: { [color]: 1 } };
             } else {
@@ -55,20 +60,20 @@ const ShopContextProvider = (props) =>{
             }
         }
     
-        setCartItems(cartData);
+        setCartItems(cartData); // Update the cart items state
     }
-
+    // Function to get the total count of items in the cart
     const getCartCount = () => {
         let totalCount = 0;
     
         for (const itemId in cartItems) {
-            const sizes = cartItems[itemId];
+            const sizes = cartItems[itemId]; // Loop through each item in cartItems
     
             for (const size in sizes) {
-                const colors = sizes[size];
+                const colors = sizes[size]; // Loop through each size for the current item
     
                 for (const color in colors) {
-                    totalCount += colors[color];
+                    totalCount += colors[color]; // Add the quantity of each color to the total count
                 }
             }
         }
@@ -76,6 +81,7 @@ const ShopContextProvider = (props) =>{
         return totalCount;
     };
 
+    // Function to update the quantity of items in the cart
     const updateQuantity = async (itemId, size, color, quantity) => {
         let cartData = structuredClone(cartItems);
     
@@ -126,8 +132,8 @@ const ShopContextProvider = (props) =>{
         return totalAmount;
     };
     
-
-    const value = {
+    
+    const value = { // Provide the context value to be used in the components
         products, currency, delivery_fee, 
         search, setSearch, showSearch, setShowSearch,
         cartItems, addToCart,
@@ -136,7 +142,7 @@ const ShopContextProvider = (props) =>{
         
 
     }
-    return(
+    return( // Wrap the children components with the ShopContext.Provider
         <ShopContext.Provider value={value}>
             {props.children}
         </ShopContext.Provider>

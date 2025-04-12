@@ -1,3 +1,5 @@
+// description: This is the contact page of the website. 
+// It contains the contact information of the company and a newsletter subscription box.
 import React from 'react'
 import Title from '../components/Title'
 import { assets } from '../assets/assets'

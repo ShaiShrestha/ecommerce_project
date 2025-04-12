@@ -1,3 +1,5 @@
+// Description: This is the main entry point for the React application. 
+// It renders the App component inside a BrowserRouter and a ShopContextProvider.
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'

@@ -1,3 +1,4 @@
+// Description: Hero component for the homepage of the pet store website. It displays a hero image and some text with a call to action.
 import React from 'react'
 import {assets} from '../assets/assets'
 const Hero = () => {
@@ -9,16 +10,16 @@ const Hero = () => {
           {/* BEST SELLERS Section */}
           <div className='flex items-center gap-2'>
             <div className='flex-1 h-[2px] bg-[#414141]'></div>
-            <p className='delius-regular font-medium text-sm md:text-base'>BEST PRODUCTS</p>
+            <p className='delius-regular font-medium text-sm md:text-base'>BEST PRODUCTS</p> 
             <div className='flex-1 h-[2px] bg-[#414141]'></div>
           </div>
           
-          <h1 className='delius-regular text-3xl sm:py-3 lg:text-5xl leading-relaxed'>New Pet Gear</h1>
+          <h1 className='delius-regular text-3xl sm:py-3 lg:text-5xl leading-relaxed'>New Pet Gear</h1> 
           
           {/* SHOP NOW Section */}
           <div className='flex items-center gap-2'>
             <div className='flex-1 h-[2px] bg-[#414141]'></div>
-            <p className='delius-regular font-semibold text-sm md:text-base'>SHOP TODAY</p>
+            <p className='delius-regular font-semibold text-sm md:text-base'>SHOP TODAY</p> 
             <div className='flex-1 h-[2px] bg-[#414141]'></div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+// description: Login page for the application
 import React, { useState } from 'react'
 
 const Login = () => {
@@ -5,7 +6,7 @@ const Login = () => {
   const [currentState, setCurrentState] = useState('Register');
 
   const onSubmitHandler = async (event) => {
-    event.preventDefault();
+    event.preventDefault(); // Prevent default form submission behavior
 
 
   }

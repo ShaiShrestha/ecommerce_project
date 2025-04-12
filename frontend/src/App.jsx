@@ -1,3 +1,5 @@
+// Description: This is the main component of the application. 
+// It contains the routing logic and renders the Navbar, Footer, and other components.
 import React from 'react'
 import {Routes,Route} from 'react-router-dom'
 import Navbar from './components/Navbar'

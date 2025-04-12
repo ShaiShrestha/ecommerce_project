@@ -1,3 +1,4 @@
+// Description: This component handles the order placement process, including delivery information and payment method selection.
 import React, { useState } from 'react';
 import Title from '../components/Title';
 import CartTotal from '../components/CartTotal';
@@ -7,7 +8,7 @@ import { ShopContext } from '../context/ShopContext';
 
 const PlaceOrder = () => {
   const [method, setMethod] = useState('cod'); // Default method is 'cod'
-  const {navigate} = useContext(ShopContext);
+  const {navigate} = useContext(ShopContext); // Importing navigate function from context 
 
   return (
     <div className="flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t">

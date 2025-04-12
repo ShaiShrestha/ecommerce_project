@@ -1,3 +1,5 @@
+// Description: This file contains the Product component which displays the product details, including images, description, and related products. 
+// It also allows users to select size and color options and add the product to the cart.
 import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
@@ -6,12 +8,12 @@ import RelatedProducts from '../components/RelatedProducts';
 
 const Product = () => {
 
-  const{productId} = useParams();
-  const {products, currency, addToCart} = useContext(ShopContext);
-  const [productData, setProductData] = useState(false);
-  const [image, setImage] = useState('');
-  const [size, setSize] = useState('');
-  const [color, setColor] = useState('');
+  const{productId} = useParams(); // Get product ID from URL parameters
+  const {products, currency, addToCart} = useContext(ShopContext); // Importing context values
+  const [productData, setProductData] = useState(false); // Initialize state for product data
+  const [image, setImage] = useState(''); // Initialize state for product image
+  const [size, setSize] = useState(''); // Initialize state for product size
+  const [color, setColor] = useState(''); // Initialize state for product color
 
 
   const fetchProductData = async () => {
@@ -64,7 +66,7 @@ const Product = () => {
             
           </div>
           <p className='mt-5 text-3xl font-medium'>{currency}{productData.price}</p>
-          <p className='mt-t text-gray-600 md:w-4/5'>{productData.description}</p>
+          <p className='mt-3 text-gray-600 md:w-4/5'>{productData.description}</p>
           <div className='flex flex-col gap-4 my-8'>
             <p>Select Size</p>
             <div className='flex gap-2'>
