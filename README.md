@@ -4,6 +4,7 @@
 ## CS-3365-002
 
 ## PROJECT 1 - All Requirements List FUFFILLED
+## git-hub: https://github.com/ShaiShrestha/ecommerce_project
 
 ### SOFTWARE AND FRAMEWORKS USED ###
 1) VSCode for editor
@@ -28,6 +29,7 @@ Google Fonts are used to include custom fonts like "Delius" in the application f
 
 
 ++++++++++++++++++++++++ Setup Instructions ++++++++++++++++++++++++
+
 1) Extract the .zip file contatining all of the project files
 2) Open the folder inside a code editor (VSCode)
 3) Inside the terminal, go to the frontend directory cd "path to the frontend directory" (usually cd frontend if project folder opened in editor)
@@ -35,10 +37,15 @@ Google Fonts are used to include custom fonts like "Delius" in the application f
 5) Click on the given local link
 
 ----------------------------- Project Files Layout -------------------------
+
 The files for the project are organized for convinience and readability. The 'src' folder contains all of the project folders for 'assets', 'components', 'context', and 'pages'. It also contains the 'App.jsx', 'index.css', and 'main.jsx' files.
++ Each component is located in the component folder
++ Every page is located in the pages folder
++ ShopContext is located in the context folder
 
 
 ----------------------------- Website Features -----------------------------
+
 The website includes the following features:
 - Each page contains the navigation bar, and the footer. Footer contains the website logo, some company information, and contact information.
 
