@@ -27,8 +27,14 @@ const CartTotal = () => {
             </div>
             <hr />
             <div className='flex justify-between'>
+                <p>Tax Rate</p>
+                <p>{currency}8.5%</p>
+
+            </div>
+            <hr />
+            <div className='flex justify-between'>
                 <b>Order Total</b>
-                <b>{currency}{getCartAmount() === 0 ? 0 : (getCartAmount() + delivery_fee).toFixed(2)}</b>
+                <b>{currency}{getCartAmount() === 0 ? 0 : ((getCartAmount() + delivery_fee)*1.085).toFixed(2)}</b>
             </div>
 
         
