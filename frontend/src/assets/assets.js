@@ -123,7 +123,7 @@ export const products = [
         category: "Dogs",
         subcategory: "Leashes & Harnesses",
         sizes: ["M"],
-        colors: ["Black", "Blue", "Yellow", "Green"], 
+        colors: ["Black", "Blue", "Pink", "Gray"], 
         date: 1232423547,
         bestseller: false,
     },
@@ -151,7 +151,7 @@ export const products = [
         category: "Dogs",
         subcategory: "Toys",
         sizes: ["S"],
-        colors: ["Blue", "Pink", "Red", "Green", "Yellow", "Orange", "Turquoise"],
+        colors: ["Blue", "Pink", "Red"],
         date: 1232423547,
         bestseller: false,
     },
@@ -181,7 +181,7 @@ export const products = [
         sizes: ["S","M"],
         colors: ["Regular"],
         date: 1232423547,
-        bestseller: false,
+        bestseller: true,
     },
 
     {
