@@ -1,11 +1,12 @@
 // description: Login page for the application
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { ShopContext } from '../context/ShopContext';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Login = () => {
 
-  const [currentState, setCurrentState] = useState('Register');
+  const [currentState, setCurrentState] = useState('Login');
   const {token, setToken, navigate, backendUrl} = useContext(ShopContext)
 
   const [name, setName] = useState('')
@@ -17,18 +18,40 @@ const Login = () => {
     try {
       if(currentState === 'Register'){
         const response = await axios.post(backendUrl + '/api/user/register', {name,email,password})
-        console.log(response.data);
+        if(response.data.success){
+          setToken(response.data.token)
+          localStorage.setItem('token',response.data.token)
+        }else{
+          toast.error(response.data.message)
+        }
 
       }else{
+
+        const response = await axios.post(backendUrl + '/api/user/login', {email,password})
+        if(response.data.success){
+          setToken(response.data.token)
+          localStorage.setItem('token',response.data.token)
+        }else{
+          toast.error(response.data.message)
+        }
 
       }
       
     } catch (error) {
+      console.log(error)
+      toast.error(error.message)
       
     }
 
 
   }
+
+  useEffect(()=>{
+    if(token){
+      navigate('/')
+    }
+
+  },[token])
 
 
   return (
